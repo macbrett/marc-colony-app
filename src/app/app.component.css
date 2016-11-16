@@ -1,2 +1,20 @@
+.site-container  {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+}
+
+.register-body{
+height:100vh;
+background:red;
+}
 
 
+
+.page-heading{
+color:white;
+      text-align: center;
+    padding: 2rem 1rem;
+}
