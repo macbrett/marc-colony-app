@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   colonist: NewColonist;
   marsJobs: Job[];
 
-  NO_JOB_SELECTED = '(none)';
+  NO_JOB_SELECTED = 'Please enter name';
 
   constructor(jobService: JobsService) {
 
@@ -27,7 +27,16 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
+
+onSubmit(event, registerForm) {
+
+event.preventDefault()
+
+registerForm.form.controls.name.invalid = true;
+
+}
 
 get jobSelection(){
   return this.colonist.job_id !== this.NO_JOB_SELECTED;

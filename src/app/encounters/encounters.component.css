@@ -29,8 +29,16 @@
     -ms-flex: 1;
     flex: 1;
     padding: 0 1rem 2rem;
-    overflow: scroll;
+
+    overflow:scroll;
+    height:400px
 }
+
+.encounter-list ul{
+
+ padding:1rem;
+}
+
 
 .encounters-page footer{
 
