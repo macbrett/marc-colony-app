@@ -1,0 +1,42 @@
+.welcome-page{
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    background: -webkit-linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)),url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+    background: linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)),url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+
+
+}
+
+
+.welcome-page h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    color:white;
+}
+
+.welcome-page h2 {
+    text-align: center;
+color:white;
+    padding: 0 1rem;
+}
+
+.welcome-page .enter-button a {
+    display: block;
+    width: 75px;
+    height: 75px;
+    background: rgba(237,237,237,.2);
+    opacity: .2;
+    border-radius: 50%;
+    -webkit-animation: border-pulse 2s infinite;
+    animation: border-pulse 2s infinite;
+}

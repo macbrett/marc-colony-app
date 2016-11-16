@@ -1,0 +1,28 @@
+
+<div class="test">{{colonist.name}} - {{colonist.age}}</div>
+
+<div class="checkin-page">
+
+<h1 class="page-heading">Register</h1>
+
+<form class="mars-form">
+<fieldset class="mars-form-fieldset">
+  <input type="text" placeholder="Enter Name" [(ngModel)]="colonist.name" name="name"/>
+<input type="number" placeholder="Age"[(ngModel)]="colonist.age" name="name"/>
+<div class="custom-select">
+<select [(ngModel)]="colonist.job_id" name="job_id">
+<option [value]="NO_JOB_SELECTED">Select a Job</option>
+  <option *ngFor="let job of marsJobs" [value]="job_id">{{job.name}} - {{ job.id }}</option>
+</select>
+</div>
+</fieldset>
+
+
+<button [disabled]="!jobSelect"type="" >Register</button>
+
+</form>
+
+{{colonist.name }} | {{colonist.age}} | {{colonist.job_id}}
+
+  <router-outlet></router-outlet>
+  </div>
