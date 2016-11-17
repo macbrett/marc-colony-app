@@ -5,24 +5,24 @@
 
 <h1 class="page-heading">Register</h1>
 
-<form class="mars-form" #registerForm="ngForm" (ngSubmit)="onSubmit($event,registerForm)">
+<form class="mars-form" [formGroup]="registerForm" (ngSubmit)="onSubmit($event,registerForm)">
 <fieldset class="mars-form-fieldset">
-  <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name"/>
-<input type="number" placeholder="Age"[(ngModel)]="colonist.age" name="name"/>
+  <input type="text" placeholder="Name" formControlName="name" required/>
+<input type="number" placeholder="Age" formControlName="age" required/>
 <div class="custom-select">
-<select [(ngModel)]="colonist.job_id" name="job_id">
-<option [value]="NO_JOB_SELECTED">Select a Job</option>
+<select formControlName="job_id">
+<option [value]="NO_JOB_SELECTED" >--Select a Job--</option>
   <option *ngFor="let job of marsJobs" [value]="job_id">{{job.name}}</option>
 </select>
 </div>
 </fieldset>
 
 
-<button>Register</button>
+<button>Enter Customs Area</button>
 
 </form>
 
-{{colonist.name }} | {{colonist.age}} | {{colonist.job_id}}
+
 
   <router-outlet></router-outlet>
   </div>

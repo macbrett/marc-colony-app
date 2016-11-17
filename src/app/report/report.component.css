@@ -1,0 +1,30 @@
+
+.page-heading {
+  margin-top:40px;
+font-family: 'Roboto', serif;
+font-style:thin;
+font-size: 3rem;
+}
+
+span{
+  padding-top:20px;
+  line-height: 2rem;
+    padding-left: .5rem;
+    font-family: 'Roboto', serif;
+
+}
+
+
+
+
+.report-page h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 1rem;
+   ;
+}
+
+.report-page h2 {
+    text-align: center;
+    padding: 0 1rem;
+}

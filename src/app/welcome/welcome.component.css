@@ -1,3 +1,20 @@
+
+
+.page-heading {
+  margin-top:40px;
+font-family: 'Roboto', serif;
+font-style:thin;
+font-size: 3rem;
+}
+
+.page-heading h1{
+  padding-top:20px;
+  line-height: 2rem;
+    padding-left: .5rem;
+
+    color: white;
+}
+
 .welcome-page{
 
     -webkit-box-align: center;
@@ -8,7 +25,8 @@
     -ms-flex-pack: distribute;
     justify-content: space-around;
     background: -webkit-linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)),url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
-    background: linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)),url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+    background: linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)),
+    url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height:100vh;
@@ -30,12 +48,17 @@ color:white;
     padding: 0 1rem;
 }
 
+.enter-button{
+
+display:flex;
+justify-content:center;
+}
 .welcome-page .enter-button a {
     display: block;
     width: 75px;
     height: 75px;
     background: rgba(237,237,237,.2);
-    opacity: .2;
+
     border-radius: 50%;
     -webkit-animation: border-pulse 2s infinite;
     animation: border-pulse 2s infinite;
