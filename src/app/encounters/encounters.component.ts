@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Encounter } from '../models';
+
 import { Alien } from '../models';
 import EncountersService from '../services/encounters.service';
+import { Encounter, NewEncounter } from '../models';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class EncountersComponent implements OnInit {
 
   constructor(encounterService: EncountersService) {
 
-  this.encounter = new Encounter(null, null, null, null, null);
+ 
 
     encounterService.getEncounters().subscribe((encounters) => {
   this.marsEncounters = encounters;
@@ -27,6 +28,8 @@ export class EncountersComponent implements OnInit {
 }
 
   ngOnInit() {
+
+
   }
 
 

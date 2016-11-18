@@ -17,6 +17,4 @@ ALIENS_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
       return this.http.get(this.ALIENS_JSON)
               .map((res: Response) => res.json().aliens);
         }
-
-
-  }
+}

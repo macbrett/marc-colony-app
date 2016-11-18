@@ -4,6 +4,16 @@
 
 <h1 class="page-heading">Report Encounter<span class="page-heading-span">Safety on Mars is your responsibilty!</span></h1>
 
+<form [formGroup]="reportForm" (ngSubmit)="onSubmit($event)">
+<select formControlName = "atype">
+<option [value]="NO_ALIEN_SELECTED">--Select and Alien-- </option>
+
+<option *ngFor="let alien of aliensList" [value]="alien.type">{{alien.type}}</option>
+</select>
+
+<textarea placeholder="Action taken" formControlName="action"></textarea>
+<button class="button" ng-click="submitReport($event, reportForm)">Submit Report</button>
+
 <div class="encounters-button">Report Encounter</div>
 <div class="encounter-list">
 
