@@ -79,10 +79,6 @@ input {
 }
 
 
-
-
-
-
 .show-validation input.ng-invalid, .show-validation select.ng-invalid, .show-validation textarea.ng-invalid {
     border-radius: 0;
     -webkit-animation: invalid-input .5s infinite;
@@ -92,7 +88,7 @@ input {
 .mars-form .custom-select {
     height: 2rem;
     border-bottom: 1px solid #fff;
-    background-color:white;
+    background-color:transparent;
 
 }
 
@@ -115,27 +111,31 @@ input {
     color: #fff;
 }
 button{
-padding: 1rem 2rem;
+padding: 1rem 0.8rem;
     background: #000;
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
     color:white;
     width:200px;
     margin-top:20px;
+    font-family: 'Roboto';
+    font-weight:100;
+    margin-bottom:20px;
 
 }
 
 .mars-form fieldset input{
-    color: gray;
+    color: white;
     width:400px;
 }
 
 .mars-form .custom-select select {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 2rem;
     padding-left: .5rem;
     font-family: 'Roboto';
+    color:red;
 
 }
 
@@ -147,23 +147,19 @@ padding: 1rem 2rem;
     font-weight:200;
 }
 
-input:invalid {
-  background-color: #ffdddd;
+
+::-webkit-input-placeholder {
+   color: red;
 }
 
-form:invalid {
-  border: 5px solid white;
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
 }
 
-
-input:required {
-  border-color: #800000;
-  border-width: 3px;
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
 }
 
-input:required:invalid {
-  border-color: #C00000;
+:-ms-input-placeholder {  
+   color: red;  
 }
-
-select option:first-child { color:red; }
-

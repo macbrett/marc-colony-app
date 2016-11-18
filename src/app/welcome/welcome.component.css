@@ -1,17 +1,17 @@
 
 
 .page-heading {
-  margin-top:40px;
+  margin-top:10px;
 font-family: 'Roboto', serif;
 font-style:thin;
 font-size: 3rem;
 }
 
 .page-heading h1{
-  padding-top:20px;
+  margin-top:60px;
   line-height: 2rem;
     padding-left: .5rem;
-
+    font-family: 'Roboto', serif;
     color: white;
 }
 
@@ -29,7 +29,7 @@ font-size: 3rem;
     url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height:100vh;
+    height:200vh;
 
 
 }
@@ -38,20 +38,25 @@ font-size: 3rem;
 .welcome-page h1 {
     text-align: center;
     text-transform: uppercase;
-    padding: 0 1rem;
+    padding-top: 2rem;
     color:white;
+    font-family: 'Roboto', serif;
+    font-weight:200;
 }
 
 .welcome-page h2 {
     text-align: center;
-color:white;
-    padding: 0 1rem;
+    color:white;
+    padding-top: 5rem;
+    font-family: 'Roboto', serif;
+    font-weight:200;
 }
 
 .enter-button{
 
 display:flex;
 justify-content:center;
+margin-top:100px;
 }
 .welcome-page .enter-button a {
     display: block;

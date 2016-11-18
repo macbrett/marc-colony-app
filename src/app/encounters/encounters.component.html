@@ -6,16 +6,19 @@
 
 <div class="encounters-button">Report Encounter</div>
 <div class="encounter-list">
-<ul *ngFor="let encounter of marsEncounters">
 
-<li>{{encounter.action}}</li>
-<li>{{encounter.date}}</li>
-<li>{{encounter.atype}}</li>
-<li>{{encounter.id}}</li>
-<li>{{encounter.colonist_id}}</li>
+  <ul>
+
+
+<li *ngFor="let encounter of marsEncounters">{{encounter.action}}</li>
+<li *ngFor="let encounter of marsEncounters">{{encounter.date}}</li>
+<li *ngFor="let encounter of marsEncounters">{{encounter.atype}}</li>
+<li *ngFor="let encounter of marsEncounters">{{encounter.id}}</li>
+<li *ngFor="let encounter of marsEncounters">{{encounter.colonist_id}}</li>
 
 </ul>
 </div>
+
 
 <footer>
 
