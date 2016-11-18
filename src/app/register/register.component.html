@@ -12,7 +12,7 @@
 <div class="custom-select">
 <select formControlName="job_id">
 <option [value]="NO_JOB_SELECTED" >--Select a Job--</option>
-  <option *ngFor="let job of marsJobs" [value]="job_id">{{job.name}}</option>
+  <option *ngFor="let job of marsJobs" [value]="job.id">{{job.name}}</option>
 </select>
 </div>
 </fieldset>

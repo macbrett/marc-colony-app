@@ -8,10 +8,12 @@ import {cantBe} from '../shared/validators';
 import {Router} from '@angular/router';
 
 
+
+
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css'],
+  styleUrls: ['./report.component.scss'],
   providers: [AliensService, EncountersService]
 
 })
@@ -50,7 +52,8 @@ onSubmit(event) {
   const date = this.getDate();
   const atype = this.reportForm.get('atype').value;
   const action = this.reportForm.get('action').value;
-  const encounter  = new NewEncounter(date, '4', atype, action)
+  const colonist_id = localStorage.getItem('colonist_id');
+  const encounter  = new NewEncounter(date, colonist_id, atype, action);
 
 this.ecountersService.submitEncounter(encounter).subscribe(()=>{
   console.log('success')

@@ -4,19 +4,16 @@
 
 <h1 class="page-heading">Recent Encounters<span>See an Alien? Report it!</span></h1>
 
-<div class="encounters-button">Report Encounter</div>
+<ul>
+<li *ngFor="let encounter of marsEncounters"> {{encounter.date}} - {{encounter.action}} - 
+ {{encounter.atype}}</li>
+</ul>
+
+<div class="encounters-button"> <a href="/report">
+Report Encounter</a>
+
 <div class="encounter-list">
 
-  <ul>
-
-
-<li *ngFor="let encounter of marsEncounters">{{encounter.action}}</li>
-<li *ngFor="let encounter of marsEncounters">{{encounter.date}}</li>
-<li *ngFor="let encounter of marsEncounters">{{encounter.atype}}</li>
-<li *ngFor="let encounter of marsEncounters">{{encounter.id}}</li>
-<li *ngFor="let encounter of marsEncounters">{{encounter.colonist_id}}</li>
-
-</ul>
 </div>
 
 

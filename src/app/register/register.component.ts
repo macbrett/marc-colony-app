@@ -1,17 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { NewColonist } from '../models';
+
 import { Job } from '../models';
 import JobsService from '../services/jobs.service';
 import {FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
-import {cantBe} from '../shared/validators.ts'
+import {cantBe} from '../shared/validators';
+import EncountersService from '../services/encounters.service';
+import {Router} from '@angular/router';
+import { Encounter } from '../models';
+import { Alien, NewEncounter } from '../models';
+import {Colonist, NewColonist} from '../models';
+import {ColonistsService} from '../services/colonists.service';
+
 
 
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
-  providers: [JobsService]
+  styleUrls: ['./register.component.scss'],
+  providers: [JobsService,ColonistsService]
 })
 
 export class RegisterComponent implements OnInit {
@@ -21,15 +28,14 @@ export class RegisterComponent implements OnInit {
 
   NO_JOB_SELECTED = '(none)';
 
-  constructor(jobService: JobsService) {
+  constructor(private jobService: JobsService,
+  private colonistsService: ColonistsService,private router: Router) {
 
   jobService.getJobs().subscribe((jobs) => {
   this.marsJobs = jobs;
   });
 
   }
-
-
 
 
 tooOld(value: number): ValidatorFn{
@@ -58,9 +64,19 @@ if(this.registerForm.invalid){
   const name = this.registerForm.get('name').value;
   const age = this.registerForm.get('age').value;
   const job_id = this.registerForm.get('job_id').value;
+  const newColonist =  new NewColonist(name,age,job_id);
 
-  console.log('ok let\'s register this new colonist:', new NewColonist(name,age,job_id));
 
-    }
-  }
+
+this.colonistsService.submitColonist(newColonist).subscribe((newColonist) => {
+  console.log(newColonist);
+  localStorage.setItem("colonist_id", JSON.stringify(newColonist.id));
+  console.log('success')
+  this.router.navigate(['/encounters']);
+}, err => {
+  console.log(err)});
 }
+
+};
+  }
+

@@ -26,8 +26,9 @@ export class NewColonist {
   constructor(
 
     public name: string,
-    public job_id: string,
-    public age: string
+    public age: string,
+    public job_id: string
+    
 
 
 ){}
