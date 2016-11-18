@@ -4,7 +4,8 @@ import { Alien, NewEncounter } from '../models';
 import AliensService from '../services/aliens.service';
 import {FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import EncountersService from '../services/encounters.service';
-import {cantBe} from '../shared/validators.ts';
+import {cantBe} from '../shared/validators';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class ReportComponent implements OnInit {
 
 
   constructor(private aliensService: AliensService,
-  private ecountersService: EncountersService) {
+  private ecountersService: EncountersService,private router: Router) {
 
  aliensService.getAliens().subscribe((aliens) => {
   this.aliensList = aliens;
@@ -44,7 +45,7 @@ private getDate(){
 }
 
 onSubmit(event) {
-console.log('it works')
+
   event.preventDefault();
   const date = this.getDate();
   const atype = this.reportForm.get('atype').value;
@@ -53,6 +54,7 @@ console.log('it works')
 
 this.ecountersService.submitEncounter(encounter).subscribe(()=>{
   console.log('success')
+  this.router.navigate(['/encounters']);
 });
 
 }
