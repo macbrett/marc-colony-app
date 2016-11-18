@@ -55,15 +55,29 @@
 color:white;
 
 }
-.encounters-button {
-    padding: 1rem 2rem;
+
+.encounters-button{
+
+padding-top:20px;
+ padding: 1rem 2rem;
     background: #000;
-color:white;
+    color:white;
     font-size: 2rem;
     text-align: center;
-        font-size:40px;
+    font-size:40px;
     text-align: center;
     font-family: "Roboto",sans-serif;
     font-weight:80;
+    text-decoration:none;
+    margin-top:20px;
+    color:white;
+
+}
+
+.encounters-button a{
+    font-family: "Roboto",sans-serif;
+    font-weight:80;
+    text-decoration:none;
+   
 }
 
