@@ -52,20 +52,37 @@ font-size: 3rem;
     font-weight:200;
 }
 
-.enter-button{
+.entrance-area{
 
 display:flex;
 justify-content:center;
+
+}
+.enter-button {
+  animation: glowing 1500ms infinite;
+width:75px;
+    border-radius: 50%;
+
+justify-content:center;
 margin-top:100px;
 }
-.welcome-page .enter-button a {
-    display: block;
-    width: 75px;
+
+.enter-button a {
+    
+   display:flex;
     height: 75px;
     background: rgba(237,237,237,.2);
-
+justify-content:center;
     border-radius: 50%;
     -webkit-animation: border-pulse 2s infinite;
     animation: border-pulse 2s infinite;
+    color:blue;
+}
+
+
+@keyframes glowing {
+  0% { background-color: #FC1C07; box-shadow: 0 0 3px #FC1C07; }
+  50% { background-color: #CF1302; box-shadow: 0 0 10px #CF1302; }
+  100% { background-color: #6A0901; box-shadow: 0 0 3px #6A0901; }
 }
 
