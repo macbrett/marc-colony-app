@@ -18,7 +18,7 @@ import { HostBinding,
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.scss'],
   providers: [AliensService, EncountersService],
-  animations: [
+    animations: [
     trigger('routeAnimation', [
       state('*',
         style({
@@ -31,21 +31,24 @@ import { HostBinding,
           opacity: 0,
           transform: 'translateX(-100%)'
         }),
-        animate('0.8s ease-in')
+        animate('0.2s ease-in')
       ]),
       transition(':leave', [
-        animate('1.5s ease-out', style({
+        animate('0.5s ease-out', style({
           opacity: 0,
           transform: 'translateY(100%)'
         }))
       ])
     ])
   ]
- 
 
 })
 export class ReportComponent implements OnInit {
-
+@HostBinding('@routeAnimation') get routeAnimation() {
+    return true;}
+      @HostBinding('style.display') get display() {
+    return 'block';
+  }
  aliensList:Alien[];
   reportForm: FormGroup;
   NO_ALIEN_SELECTED = '(none)'

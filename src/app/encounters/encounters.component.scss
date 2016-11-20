@@ -22,21 +22,21 @@
     font-weight:100;
 }
 
-.encounter-list{
+ .encounters-page .encounters-list{
 
   -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     padding: 0 1rem 2rem;
-
     overflow:scroll;
-    height:400px
+    height:100px;
+    
 }
 
-.encounter-list ul{
+.encounters-list li{
 
- padding:1rem;
+font-family: 'Exo', sans-serif;
 }
 
 
@@ -75,9 +75,10 @@ padding-top:20px;
 }
 
 .encounters-button a{
-    font-family: "Roboto",sans-serif;
+    font-family: "Exo",sans-serif;
     font-weight:80;
     text-decoration:none;
+    color:white;
    
 }
 

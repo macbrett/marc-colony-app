@@ -23,14 +23,14 @@ import { HostBinding,
       transition(':enter', [
         style({
           opacity: 0,
-          transform: 'translateY(-100%)'
+          transform: 'translateX(-100%)'
         }),
-        animate('0.1s ease-in')
+        animate('0.2s ease-in')
       ]),
       transition(':leave', [
-        animate('0.8s ease-out', style({
+        animate('0.5s ease-out', style({
           opacity: 0,
-          transform: 'translateX(100%)'
+          transform: 'translateY(100%)'
         }))
       ])
     ])
@@ -38,7 +38,11 @@ import { HostBinding,
  
 })
 export class EncountersComponent implements OnInit {
-
+@HostBinding('@routeAnimation') get routeAnimation() {
+    return true;}
+      @HostBinding('style.display') get display() {
+    return 'block';
+  }
   encounter: Encounter;
   marsEncounters: Encounter[];
 
