@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
   marsJobs: Job[];
   registerForm: FormGroup;
 
-  NO_JOB_SELECTED = '(none)';
+  NO_JOB_SELECTED = '';
 
   constructor(private jobService: JobsService,
   private colonistsService: ColonistsService,private router: Router) {
@@ -102,7 +102,7 @@ if(this.registerForm.invalid){
 this.colonistsService.submitColonist(newColonist).subscribe((newColonist) => {
   console.log(newColonist);
   localStorage.setItem("colonist_id", JSON.stringify(newColonist.id));
-  console.log('success')
+ 
   this.router.navigate(['/encounters']);
 }, err => {
   console.log(err)});

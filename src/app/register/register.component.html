@@ -5,12 +5,12 @@
 
 <h1 class="page-heading">Register</h1>
 
-<form class="mars-form" [formGroup]="registerForm"  (ngSubmit)="onSubmit($event,registerForm)">
+<form class="mars-form" [formGroup]="registerForm"  (ngSubmit)="onSubmit($event,registerForm)" novalidate>
 <fieldset class="mars-form-fieldset">
   <input type="text" placeholder="Name" formControlName="name" ngmodel="colonist.name" required/>
 <input type="number" placeholder="Age" formControlName="age" ngmodel="colonist.age" />
 <div class="custom-select">
-<select formControlName="job_id" ngmodel="colonist.job_id" >
+<select formControlName="job_id" ngmodel="colonist.job_id" required>
 <option [value]="NO_JOB_SELECTED" >--Select a Job--</option>
   <option *ngFor="let job of marsJobs" [value]="job.id">{{job.name}}</option>
 </select>

@@ -51,7 +51,7 @@ export class ReportComponent implements OnInit {
   }
  aliensList:Alien[];
   reportForm: FormGroup;
-  NO_ALIEN_SELECTED = '(none)'
+  NO_ALIEN_SELECTED = ''
   
 
 
@@ -77,7 +77,10 @@ private getDate(){
 }
 
 onSubmit(event) {
+if(this.reportForm.invalid){
 
+
+} else {
   event.preventDefault();
   const date = this.getDate();
   const atype = this.reportForm.get('atype').value;
@@ -86,9 +89,11 @@ onSubmit(event) {
   const encounter  = new NewEncounter(date, colonist_id, atype, action);
 
 this.ecountersService.submitEncounter(encounter).subscribe(()=>{
-  console.log('success')
+  
   this.router.navigate(['/encounters']);
-});
+}, err => {
+  console.log(err)});
+}
 
-}
-}
+};
+  }

@@ -4,16 +4,16 @@
 
 <h1 class="page-heading">Report Encounter<span class="page-heading-span">Safety on Mars is your responsibilty!</span></h1>
 
-<form [formGroup]="reportForm" (ngSubmit)="onSubmit($event)" class="mars-form">
+<form [formGroup]="reportForm" (ngSubmit)="onSubmit($event,reportForm)" class="mars-form" novalidate>
 
 <div class="custom-select">
-<select formControlName = "atype">
+<select formControlName = "atype" name="alienType"  ng-model="encounter.atype" required>
 <option [value]="NO_ALIEN_SELECTED">--Select an Alien-- </option>
-<option *ngFor="let alien of aliensList" [value]="alien.type">{{alien.type}}</option>
+<option *ngFor="let alien of aliensList" [value]="alien.type" >{{alien.type}}</option>
 </select>
 </div>
 
-<textarea placeholder="Action taken" formControlName="action"></textarea>
+<textarea placeholder="Action taken" formControlName="action" ></textarea>
 <button class="button" ng-click="submitReport($event, reportForm)">Submit Report</button>
 
 <div class="encounters-button">Report Encounter</div>
