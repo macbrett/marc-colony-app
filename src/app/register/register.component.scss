@@ -193,4 +193,6 @@ padding: 1rem 0.8rem;
 }
 
 
-
+textarea:focus, input:focus{
+    outline: none;
+}

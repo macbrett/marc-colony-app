@@ -168,3 +168,7 @@ padding: 1rem 0.8rem;
 input:required {
   box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
 }
+
+textarea:focus, input:focus{
+    outline: none;
+}
