@@ -24,12 +24,15 @@ font-size: 3rem;
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    background: -webkit-linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)),url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+    background: -webkit-linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)),url('https://www.nasa.gov/sites/default/files/thumbnails/image/pia20281-full.jpg');
     background: linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)),
-    url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+    url('https://www.nasa.gov/sites/default/files/thumbnails/image/pia20281-full.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height:200vh;
+    background-position: right bottom;
+   
+   
 
 
 }
@@ -76,7 +79,7 @@ justify-content:center;
     border-radius: 50%;
     -webkit-animation: border-pulse 2s infinite;
     animation: border-pulse 2s infinite;
-    color:blue;
+   
 }
 
 

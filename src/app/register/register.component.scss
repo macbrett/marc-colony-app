@@ -98,7 +98,7 @@ input {
     display: block;
     padding: 0;
     width: 15%;
-
+    background-color:transparent;
 }
 
 [ng-click]:hover {
@@ -126,7 +126,7 @@ padding: 1rem 0.8rem;
 }
 
 .mars-form fieldset input{
-    color: white;
+    background-color: transparent;
     width:400px;
 }
 
@@ -136,7 +136,8 @@ padding: 1rem 0.8rem;
     padding-left: .5rem;
     font-family: 'Roboto';
     color:red;
-
+    background-color: transparent;
+    border:none;
 }
 
 .page-heading {
@@ -163,3 +164,33 @@ padding: 1rem 0.8rem;
 :-ms-input-placeholder {  
    color: red;  
 }
+
+
+
+.mars-form .ng-invalid.ng-pristine.ng-touched
+{
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    border: 1px solid #FC1C07;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #CF1302;
+    -moz-box-shadow: 0px 0px 8px #CF1302;
+    -webkit-box-shadow: 0px 0px 8px #CF1302;
+}
+
+
+.mars-form .ng-invalid.ng-dirty.ng-touched 
+{
+     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    border: 1px solid #FC1C07;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #CF1302;
+    -moz-box-shadow: 0px 0px 8px #CF1302;
+    -webkit-box-shadow: 0px 0px 8px #CF1302;
+}
+
+
+

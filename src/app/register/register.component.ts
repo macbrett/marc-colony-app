@@ -10,6 +10,9 @@ import { Encounter } from '../models';
 import { Alien, NewEncounter } from '../models';
 import {Colonist, NewColonist} from '../models';
 import {ColonistsService} from '../services/colonists.service';
+import { HostBinding,
+         trigger, transition, animate,
+         style, state  } from '@angular/core';
 
 
 
@@ -18,11 +21,39 @@ import {ColonistsService} from '../services/colonists.service';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
-  providers: [JobsService,ColonistsService]
+  providers: [JobsService,ColonistsService],
+animations: [
+    trigger('routeAnimation', [
+      state('*',
+        style({
+          opacity: 1,
+          transform: 'translateX(0)'
+        })
+      ),
+      transition(':enter', [
+        style({
+          opacity: 0,
+          transform: 'translateX(-100%)'
+        }),
+        animate('0.2s ease-in')
+      ]),
+      transition(':leave', [
+        animate('0.5s ease-out', style({
+          opacity: 0,
+          transform: 'translateY(100%)'
+        }))
+      ])
+    ])
+  ]
+ 
 })
 
 export class RegisterComponent implements OnInit {
-
+@HostBinding('@routeAnimation') get routeAnimation() {
+    return true;}
+      @HostBinding('style.display') get display() {
+    return 'block';
+  }
   marsJobs: Job[];
   registerForm: FormGroup;
 

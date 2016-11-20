@@ -6,6 +6,9 @@ import {FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractCo
 import EncountersService from '../services/encounters.service';
 import {cantBe} from '../shared/validators';
 import {Router} from '@angular/router';
+import { HostBinding,
+         trigger, transition, animate,
+         style, state  } from '@angular/core';
 
 
 
@@ -14,7 +17,31 @@ import {Router} from '@angular/router';
   selector: 'app-report',
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.scss'],
-  providers: [AliensService, EncountersService]
+  providers: [AliensService, EncountersService],
+  animations: [
+    trigger('routeAnimation', [
+      state('*',
+        style({
+          opacity: 1,
+          transform: 'translateX(0)'
+        })
+      ),
+      transition(':enter', [
+        style({
+          opacity: 0,
+          transform: 'translateX(-100%)'
+        }),
+        animate('0.8s ease-in')
+      ]),
+      transition(':leave', [
+        animate('1.5s ease-out', style({
+          opacity: 0,
+          transform: 'translateY(100%)'
+        }))
+      ])
+    ])
+  ]
+ 
 
 })
 export class ReportComponent implements OnInit {
