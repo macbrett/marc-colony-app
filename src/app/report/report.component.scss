@@ -80,14 +80,14 @@ textarea {
     display: -ms-flexbox;
     display: flex;
 }
-.mars-form .custom-select {
+.mars-form .custom-select-report {
     height: 2rem;
-    border-bottom: 1px solid #fff;
+   
     background-color:transparent;
 
 }
 
-.custom-select {
+.custom-select-report {
     position: relative;
     height: 0.25rem;
     display: block;
@@ -121,7 +121,7 @@ padding: 1rem 0.8rem;
     width:400px;
 }
 
-.mars-form .custom-select select {
+.mars-form .custom-select-report select {
     font-size: 1.1rem;
     line-height: 2rem;
     padding-left: .5rem;
@@ -130,6 +130,8 @@ padding: 1rem 0.8rem;
     background-color: transparent;
     border:none;
 }
+
+
 .mars-form .ng-invalid.ng-pristine.ng-touched
 {
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
@@ -155,20 +157,5 @@ padding: 1rem 0.8rem;
     -webkit-box-shadow: 0px 0px 8px #CF1302;
 }
 
-.mars-form.custom-select.ng-invalid.ng-pristine.ng-touched  {
-    font-size: 1.1rem;
-    line-height: 2rem;
-    padding-left: .5rem;
-    font-family: 'Roboto';
-    color:red;
-    background-color: transparent;
-    border:none;
-}
 
-input:required {
-  box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
-}
 
-textarea:focus, input:focus{
-    outline: none;
-}

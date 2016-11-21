@@ -6,7 +6,7 @@
 
 <form [formGroup]="reportForm" (ngSubmit)="onSubmit($event,reportForm)" class="mars-form" novalidate>
 
-<div class="custom-select">
+<div class="custom-select-report">
 <select formControlName = "atype" name="alienType"  ng-model="encounter.atype" required>
 <option [value]="NO_ALIEN_SELECTED">--Select an Alien-- </option>
 <option *ngFor="let alien of aliensList" [value]="alien.type" >{{alien.type}}</option>
